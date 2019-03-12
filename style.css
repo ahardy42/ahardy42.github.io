@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+#header {
+    background-color: rgb(97, 145, 129);
+    padding: 20px;
+}
+
+#navBar {
+    float: left;
+    background-color: rgb(108, 112, 111);
+    height: 400px;
+    margin: 20px 0;
+    width: 20%;
+}
+
+img {
+    height: 300px;
+    margin: 50px auto;
+}
+
+.selector {
+    background-color: rgb(173, 171, 171);
+    float: left;
+    height: 400px;
+    margin: 20px 0;
+    width: 80%;
+}
+
+.buttons {
+    clear: left;
+    background-color: rgb(108, 112, 111);
+    margin: 20px 0;
+}
