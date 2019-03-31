@@ -5,7 +5,9 @@
 
 body {
     color: #777777;
-    background-image: url(../images/white-waves.png);
+    background-image: url(../images/beautiful-scenic-roadway-through-the-mountains-in-banff-national-park-alberta-canada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -19,14 +21,16 @@ p {
     margin: 0 1em 1em 1em;
 }
 
+
 .header {
+    opacity: 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 8.33%);
     grid-template-rows: auto;
     align-content: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #ffffffcc;
     margin-bottom: 2em;
     border-bottom: 2px solid #cccccc;
 }
@@ -52,11 +56,12 @@ p {
 
 a {
     text-decoration: none;
-    padding: 20px;
+    padding: 10px;
     color: #777777;
 }
 
 .container {
+    opacity: 0;
     width: 55%;
     overflow: hidden;
     margin-left: 5em;
@@ -64,7 +69,7 @@ a {
     display: grid;
     grid-template-columns: repeat(12, 8.33%);
     grid-template-rows: min-content min-content 15px;
-    background-color: #ffffff;
+    background-color: #ffffffcc ;
 }
 
 .aboutMe {
@@ -206,17 +211,6 @@ a.portfolioLink:hover {
     background-color: #2e706d;
 }
 
-footer {
-    background-color: #666;
-    border-top: 8px solid #4aaaa5;
-    padding: 30px 30px 5px 30px;
-    text-align: center;
-    font-size: 0.6em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
@@ -253,10 +247,6 @@ footer {
         grid-row-start: 2;
         align-self: center;
         justify-self: center;
-    }
-
-    a {
-        padding: 50px;
     }
 
     .portfolio-items {
