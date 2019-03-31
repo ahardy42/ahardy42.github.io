@@ -1,2 +1,2 @@
-# ahardy42.github.io
-week 2 activity 5
+# Responsive-Portfolio
+re-styling Basic-Portfolio using responsive web design principles. 

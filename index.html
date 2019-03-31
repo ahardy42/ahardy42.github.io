@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Random Run Selector</title>
-  </head>
-  <body>
-    <div id="header">
-        <h1>Random Run Selector!</h1>
+    <title>Andy Hardy | Portfolio</title>
+    <!--reset css-->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!--my stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="name">
+                <h1>Andy Hardy</h1>
+            </div>
+            <div class="navBar">
+                    <a href="index.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+            </div>
+        </header>
+        <section class="container">
+            <div class="aboutMe">
+                <h1>About Me</h1>
+            </div>
+            <div class="profileAndAbout">
+                <div class="imageBox">
+                    <img src="assets/images/profile_picture.png">
+                </div>
+                <div class="aboutMe">
+                    <p>My name is Andy Hardy. I currently live in Frisco Colorado with my wife, Katie. We moved here from the
+                        Boston area in 2014, leaving our old jobs, and lack of snow, happily behind us. Above all, I like to
+                        spend time outside. I ski in the winter, I bike and run in the summer, and almost always I am thinking
+                        about when I am going to do one of those activities next. This is what brought me to Colorado!</p>
+                    <p>For the last 15 years I have been a chemist in some capacity. I left a job at a major pharmaceutical
+                        company when I left Boston, and immediately starting selling ski boots. After the first season I painted
+                        lift towers for a summer, but didn't really dig the stresses of seasonal work, so I found a job
+                        formulating adhesives in Breckenridge. I really enjoy learning new things, and this new job satisfied
+                        that requirement for a few years. Though I have a good job, I am curious about possibilities for more
+                        flexibility, yet a stable income. This brings me to coding.</p>
+                    <p id="bottom">I have gotten my feet wet with a few online classes. I took a React.js class last summer, built a spotify
+                        playlist generator, and I enjoyed it. What brings me to the boot camp is a desire to get deeper into
+                        full stack development, and to understand what is required in a devlopment job. I think I made the right
+                        choice!</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            Copyright 2019
+        </footer>
     </div>
-    <div id="navBar">
-        <h3>Days 'till HL100:</h3>
-        <!--placeholder for JS timer-->
-        <p id="countDown">180 days!</p> 
-    </div>
-    <div class="selector">
-        <h3>Huge Button Goes Here!</h3>
-        <img src="https://d1q7lic7vtrap6.cloudfront.net/calendar-images/img/full-3cd0a540-5620-11e8-882d-93c0f3051a72.jpeg" alt="mountains">
-    </div>
-    <div class="buttons">
-        <h3>Choose Location:</h3>
-        <button id="frontRange">Denver</button>
-        <button id="summitCounty">Summit</button>
-        <h3>Mileage Options</h3>
-        <button id="lessThan10">10 or Less</button>
-        <button id="11to15">11 to 15</button>
-        <button id="16to25">16 to 25</button>
-    </div>
-  </body>
+</body>
+
 </html>
