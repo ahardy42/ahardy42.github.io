@@ -151,7 +151,7 @@ button {
     margin-bottom: 90px;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(3, 30.33%);
+    grid-template-rows: auto;
     grid-row-gap: 1em;
 }
 
@@ -250,7 +250,7 @@ a.portfolioLink:hover {
 
     .portfolio-items {
         grid-template-columns: 100%;
-        grid-template-rows: repeat(5, 20%);
+        grid-template-rows: auto;
     }
 
     .image-1 {
