@@ -48,14 +48,16 @@ p {
 .navBar {
     grid-column-start: 8;
     grid-column-end: 12;
-    display: inline;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     align-self: center;
     justify-self: right;
+    justify-content: stretch;
     overflow: hidden;
 }
 
-a {
-    text-decoration: none;
+.nav {
+    text-align: center;
     padding: 10px;
     color: #777777;
 }
@@ -92,6 +94,16 @@ a {
     grid-column-end: 12;
     grid-row-start: 2;
     padding-top: 0.5em;
+}
+
+.arrow {
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    justify-self: center;
+    align-self: center;
+    font-size: 2.5em;
+    transform: scaleY(4);
 }
 
 .imageBox > img {
@@ -210,7 +222,7 @@ a.portfolioLink:hover {
     background-color: #2e706d;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 975px) {
     .container {
         width: 90%;
         margin: 0 auto;
@@ -221,7 +233,7 @@ a.portfolioLink:hover {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 761px) {
     .header {
         grid-template-rows: 80px 80px;
     }
