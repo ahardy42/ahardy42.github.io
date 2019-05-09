@@ -19,37 +19,78 @@
                 <h1>Andy Hardy</h1>
             </div>
             <div class="navBar">
-                <h3 class="nav" id="about">About</h3>
-                <h3 class="nav" id="portfolio">Portfolio</h3>
-                <h3 class="nav" id="contact">Contact</h3>
+                <img src="assets/images/logos/instagram.png" class="logo"><a href="#" class="nav" id="insta"></a></img>
+                <img src="assets/images/logos/github-logo.png" class="logo"><a href="#" class="nav"
+                    id="github"></a></img>
+                <img src="assets/images/logos/linkedin.png" class="logo"><a href="#" class="nav"
+                    id="linkedIn"></a></img>
             </div>
         </header>
-        <section class="container index-container">
-            <div class="aboutMe">
-                <h1>About Me</h1>
-            </div>
-            <div class="profileAndAbout">
-                <div class="imageBox">
-                    <img src="assets/images/profile_picture.png">
+        <section class="scene">
+            <div class="card"> <!-- allows me to use the card flip animation on this page -->
+                <div class="card_face card_face--front">
+                    <div class="aboutMe">
+                        <h1>About Me</h1>
+                    </div>
+                    <div class="profileAndAbout">
+                        <div class="imageBox">
+                            <img src="assets/images/profile_picture.png">
+                        </div>
+                        <div class="aboutMe">
+                            <p>My name is Andy Hardy. I currently live in Frisco Colorado with my wife, Katie. We moved here
+                                from the Boston area in 2014, leaving our old jobs, and lack of snow, happily behind us. Above all, I
+                                like to spend time outside. I ski in the winter, I bike and run in the summer, and almost always I am
+                                thinking about when I am going to do one of those activities next. This is what brought me to Colorado!
+                            </p>
+                            <p>I am a full stack web developer with experience building MERN stack web apps to solve real-world
+                                problems. Through the completion of the Denver University Coding Boot Camp, I am experienced
+                                developing full stack web apps, using JavaScript, HTML and CSS. I am also experienced developing
+                                within a group environment using agile methodology. </p>
+                            <p id="bottom">I am building upon 15 years experience in the sciences, as a chemist, where I thrived applying logic to
+                                solve problems on a daily basis. Through the years as a professional chemist, turned coder, I have refined my skills
+                                as a pragmatic, adaptable and flexible to change, clear and concise communicator. I am truly ecstatic about the
+                                possibility to leverage my problem solving, and communication skills toward success as a member of your team!</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="aboutMe">
-                    <p>My name is Andy Hardy. I currently live in Frisco Colorado with my wife, Katie. We moved here from the
-                        Boston area in 2014, leaving our old jobs, and lack of snow, happily behind us. Above all, I like to
-                        spend time outside. I ski in the winter, I bike and run in the summer, and almost always I am thinking
-                        about when I am going to do one of those activities next. This is what brought me to Colorado!</p>
-                    <p>For the last 15 years I have been a chemist in some capacity. I left a job at a major pharmaceutical
-                        company when I left Boston, and immediately starting selling ski boots. After the first season I painted
-                        lift towers for a summer, but didn't really dig the stresses of seasonal work, so I found a job
-                        formulating adhesives in Breckenridge. I really enjoy learning new things, and this new job satisfied
-                        that requirement for a few years. Though I have a good job, I am curious about possibilities for more
-                        flexibility, yet a stable income. This brings me to coding.</p>
-                    <p id="bottom">I have gotten my feet wet with a few online classes. I took a React.js class last summer, built a spotify
-                        playlist generator, and I enjoyed it. What brings me to the boot camp is a desire to get deeper into
-                        full stack development, and to understand what is required in a devlopment job. I think I made the right
-                        choice!</p>
+                <div class="card_face card_face--back">
+                    <div class="aboutMe">
+                        <h1>Portfolio</h1>
+                    </div>
+                    <div class="portfolio-items">
+                        <div class="image-1">
+                            <div class="relative">
+                                <img src="assets/images/Word-Guess-Game.png" class="img-portfolio">
+                                <a class="portfolioLink" href="https://ahardy42.github.io/Word-Guess-Game/" target="_blank">Word Guess Game</a>
+                            </div>
+                        </div>
+                        <div class="image-2">
+                            <div class="relative">
+                                <img src="assets/images/darth-vader-orig_orig.jpg" class="img-portfolio">
+                                <a class="portfolioLink" href="https://ahardy42.github.io/unit-4-game/" target="_blank">Star Wars RPG</a>
+                            </div>
+                        </div>
+                        <div class="image-3">
+                            <div class="relative">
+                                <img src="assets/images/TriviaGameCover.png" class="img-portfolio">
+                                <a class="portfolioLink" href="https://ahardy42.github.io/TriviaGame/" target="_blank">Trivia Game | Pearl Jam Lyrics</a>
+                            </div>
+                        </div>
+                        <div class="image-4">
+                            <div class="relative">
+                                <img src="assets/images/Giftastic_cover.png" class="img-portfolio">
+                                <a class="portfolioLink" href="https://ahardy42.github.io/GifTastic/" target="_blank">Giftastic | Movie Gif Search</a>
+                            </div>
+                        </div>
+                        <div class="image-5">
+                            <div class="relative">
+                                <img src="assets/images/Train_wreck_at_Montparnasse_1895.jpg" class="img-portfolio">
+                                <a class="portfolioLink" href="https://ahardy42.github.io/Train-Scheduler/" target="_blank">Train Scheduler | Working with Firebase</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="arrow">></div>
         </section>
 
         <script src="assets/javascript/javascript.js"></script>
