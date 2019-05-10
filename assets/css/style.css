@@ -30,7 +30,6 @@ p {
     margin: 0 1em 1em 1em;
 }
 
-
 .header {
     opacity: 0;
     width: 100%;
@@ -51,7 +50,7 @@ p {
     justify-self: left;
     color: #ffffff;
     background-color: #4aaaa5;
-    padding: 1.2em;  
+    padding: 1.2em;
 }
 
 .navBar {
@@ -80,7 +79,7 @@ p {
     margin-left: 5em;
     margin-bottom: 90px;
     perspective: 600px;
-  }
+}
 
 .card {
     width: 100%;
@@ -88,41 +87,51 @@ p {
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
-  }
+}
 
-  .card_face {
+.card_face {
     height: 100%;
     width: 100%;
     opacity: 0;
     position: absolute;
     backface-visibility: hidden;
-    display: grid;
-    grid-template-columns: repeat(12, 8.33%);
-    grid-template-rows: min-content min-content 15px;
-  }
+}
 
-  .card_face--front {
+.card_face--front {
     background: #ffffff;
-  }
-  
-  .card_face--back {
+}
+
+.card_face--back {
     background: #ffffff;
-    transform: rotateX( 180deg );
-  }
+    transform: rotateX( 180deg);
+}
 
 /* end of the css for the flipping cards! */
 
-/* .container {
-    opacity: 0;
-    width: 55%;
-    overflow: hidden;
-    margin-left: 5em;
-    margin-bottom: 90px;
-    display: grid;
-    grid-template-columns: repeat(12, 8.33%);
-    grid-template-rows: min-content min-content 15px;
-    background-color: #ffffffcc; 
-} */
+/* beginning of carousel code */
+
+.scene-2 {
+    position: relative;
+    perspective: 1000px;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-12px);
+}
+
+.carousel-cell {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+}
+
+/* end of carousel code */
 
 .aboutMe {
     grid-column-start: 1;
@@ -132,20 +141,7 @@ p {
     align-self: center;
 }
 
-.portfolio-items {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 2;
-    width: 100%;
-    padding: 1em;
-    margin-bottom: 90px;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: auto;
-    grid-row-gap: 1em;
-}
-
-.aboutMe > h1 {
+.aboutMe>h1 {
     color: #4aaaa5;
     margin-left: 0.6em;
     padding: 0.5em 0;
@@ -169,7 +165,7 @@ p {
     transform: scaleY(4);
 }
 
-.imageBox > img {
+.imageBox>img {
     width: 200px;
     float: left;
     padding-top: 0.5em;
@@ -256,7 +252,7 @@ button {
     height: 200px;
 }
 
-.portfolioLink { 
+.portfolioLink {
     position: absolute;
     width: 250px;
     background-color: #4aaaa5;
@@ -277,7 +273,6 @@ a.portfolioLink:hover {
         width: 90%;
         margin: 0 auto;
     }
-
     .navBar {
         grid-column-start: 7;
     }
@@ -287,7 +282,6 @@ a.portfolioLink:hover {
     .header {
         grid-template-rows: 80px 80px;
     }
-
     .name {
         grid-column-start: 1;
         grid-column-end: 13;
@@ -297,11 +291,9 @@ a.portfolioLink:hover {
         align-self: center;
         justify-self: center;
     }
-
     h1 {
         text-align: center;
     }
-
     .navBar {
         grid-column-start: 2;
         grid-column-end: 12;
@@ -309,43 +301,35 @@ a.portfolioLink:hover {
         align-self: center;
         justify-self: center;
     }
-
     .portfolio-items {
         grid-template-columns: 100%;
         grid-template-rows: auto;
     }
-
     .image-1 {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
     }
-
     .image-2 {
         grid-column: 1 / span 1;
         grid-row: 2 / span 1;
     }
-
     .image-3 {
         grid-column: 1 / span 1;
         grid-row: 3 / span 1;
     }
-
     .image-4 {
         grid-column: 1 / span 1;
         grid-row: 4 / span 1;
     }
-
     .image-5 {
         grid-column: 1 / span 1;
         grid-row: 5 / span 1;
     }
-
     .img-portfolio {
         width: 300px;
         height: 200px;
     }
-    
-    .portfolioLink { 
+    .portfolioLink {
         width: 300px;
     }
 }

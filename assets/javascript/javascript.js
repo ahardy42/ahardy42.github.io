@@ -2,25 +2,47 @@ $(document).ready(function () {
 
   $(".header, .card_face, .scene").animate({ opacity: "1" }, 1);
 
-  $(".card").on("click", function() {
+  // set the back of the card to the same height as the front
+  var divHeight = $(".profileAndAbout").css("height");
+  var divWidth = $(".profileAndAbout").css("width");
+  $(".scene-2").css({
+    "height": divHeight,
+    "width": divWidth
+  });
+
+
+  // ======================= content flip on swipe / arrow click ===================
+  var turn = 0.5; // use this to flip the container
+
+  $(".card").on("click", function () {
     console.log("you clicked me");
     // change the css to flip the card
     var card = $(".card");
-    
-    if (card.attr("style") === "transform: rotateX(180deg);") {
-      card.css("transform", "rotateX(360deg)");
-      card.removeAttr("style");
-    } else {
-      card.css("transform", "rotateX(180deg)");
-    }
-    console.log(card.attr("style"));
-  })
-  // ----------------- functions ------------------------------
-  // function to break down the container section resulting from onclick/onswipe 
-  
+    card.css("transform", "rotateX(" + turn + "turn)");
+    turn += 0.5;
+  });
+  // ===============================================================================
 
-  // function to build the container section again resulting from onclick/onswipe
+  // ======================== carousel flippy code ==================================
+
+  // code to set initial rotate based on how many carousel panels there are
+  var carouselPanels = $(".carousel").children();
+  var carouselPanelNum = carouselPanels.length;
+  var rotateY = 360 / carouselPanelNum;
+  var rotateItByThis = 0;
+
+  // code to produce proper outward shift based on width of the panel
+  var panelWidth = parseInt($(".carousel-cell").css("width"));
+  console.log(panelWidth);
+  var zShift = Math.round((panelWidth / 2) / Math.tan(Math.PI / carouselPanelNum));
+
+  for (i = 0; i < carouselPanelNum; i++) {
+    carouselPanels[i].style.transform = "rotateY(" + rotateItByThis + "deg) translateZ(" + zShift + "px)";
+    rotateItByThis += rotateY;
+  };
 
 
-  // onclick function for the arrow 
+
+
+
 });
