@@ -1,5 +1,29 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $(".header, .container").animate({opacity: "1"}, 2000);
-  
+  // ======================= content flip on arrow click ===================
+  var turnFloat = 0.0;
+
+  $(".arrow-up").on("click", function () { 
+    console.log("clicked it");
+    turnFloat += 0.5;
+    $(".card").css("transform", "rotateX(" + turnFloat + "turn)");
   });
+
+  $(".arrow-down").on("click", function () {
+    console.log("clicked it");
+    turnFloat -= 0.5;
+    $(".card").css("transform", "rotateX(" + turnFloat + "turn)");
+  });
+  // ===============================================================================
+
+  // ======================== carousel flippy code using flickity ==================
+  $('.main-carousel').flickity({
+    // options
+    cellAlign: 'center',
+    wrapAround: true,
+    imagesLoaded: true,
+  });
+
+
+
+});
