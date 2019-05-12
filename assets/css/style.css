@@ -76,7 +76,7 @@ header {
     margin: 0.5em auto;
     width: 85%;
     z-index: 0;
-    height: 70%;
+    height: 90%;
     perspective: 500px;
 }
 
@@ -102,17 +102,13 @@ header {
 
 .about {
     margin: 2em;
-    height: 10%;
+    /* height: 10%; */
 }
 
 .profile {
-    max-height: 350px;
+    /* max-height: 350px; */
     height: auto;
     overflow: scroll;
-}
-
-.about-me {
-    height: 90%;
 }
 
 .profile-image {
@@ -155,14 +151,15 @@ i {
 
 .carousel-cell {
     background-color: white;
-    height: 300px;
+    height: 400px;
     width: 100%;
-    max-height: 300px;
+    /* max-height: 300px; */
     margin-right: 10px;
     opacity: 0.8;
     padding: 1em;
     border: 2px solid black;
     border-radius: 5px;
+    counter-increment: gallery-cell;
 }
 
 .carousel-cell.is-selected {
@@ -170,7 +167,7 @@ i {
     display: flex;
 }
 
-.carousel-cell>img {
+.carousel-cell-image {
     height: 100%;
     max-width: 400px;
 }
@@ -190,4 +187,97 @@ i {
 .flickity-viewport {
     overflow: hidden;
     margin: auto 10px;
+}
+
+/* position dots up a bit */
+
+.flickity-page-dots {
+    bottom: -22px;
+}
+
+/* dots are lines */
+
+.flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* no circle */
+
+.flickity-button {
+    background: transparent;
+}
+
+/* big previous & next buttons */
+
+.flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+}
+
+/* icon color */
+
+.flickity-button-icon {
+    fill: white;
+}
+
+/* hide disabled button */
+
+.flickity-button:disabled {
+    display: none;
+}
+
+/* Breakpoints */
+
+@media screen and (max-width: 830px) {
+    .carousel-cell-image {
+        align-self: center;
+        height: 80%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .header {
+        flex-direction: column;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(2, 105, 2, 0.4), rgba(255, 255, 255, 0.1));
+    }
+    .header-h1 {
+        background-image: none;
+    }
+    .navbar {
+        justify-content: center;
+    }
+    .nav {
+        margin: 0 1em;
+    }
+    .carousel-cell {
+        align-content: space-around;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .carousel-cell-div {
+        margin: 0.4em 1em;
+    }
+    .carousel-cell-p {
+        margin: 0 1em;
+    }
+    .carousel-cell-link > img {
+        height: 50px;
+    }
+    .carousel-cell-image {
+        align-self: center;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .carousel-cell-link > img {
+        height: 30px;
+    }
+    .profile-image {
+        height: 200px;
+    } 
 }
