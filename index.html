@@ -24,77 +24,108 @@
             </div>
             <div class="navbar">
                 <a href="#" class="nav" id="insta"><img src="assets/images/logos/instagram.png" class="logo"></img></a>
-                <a href="#" class="nav" id="github"><img src="assets/images/logos/github-logo.png" class="logo"></img></a>
-                <a href="#" class="nav" id="linkedIn"><img src="assets/images/logos/linkedin.png" class="logo"></img></a>
+                <a href="#" class="nav" id="github"><img src="assets/images/logos/github-logo.png"
+                        class="logo"></img></a>
+                <a href="#" class="nav" id="linkedIn"><img src="assets/images/logos/linkedin.png"
+                        class="logo"></img></a>
             </div>
         </header>
+        <div class="arrow"><p class="arrow-p"><i class="arrow-up"></i></p></div>
         <section class="scene">
             <div class="card">
                 <!-- allows me to use the card flip animation on this page -->
-                <div class="card-face card-face-front">
+                <div class="card-face card-face-front" id="front">
                     <div class="about">
-                        <h1>About Me</h1>
+                        <h2>About Me</h2>
                     </div>
-                    <div class="profileAndAbout">
+                    <div class="profile">
                         <div class="profile-image">
                             <img src="assets/images/profile_picture.png">
                         </div>
-                        <div class="aboutMe">
-                            <p>My name is Andy Hardy. I currently live in Frisco Colorado with my wife, Katie. We moved
-                                here
-                                from the Boston area in 2014, leaving our old jobs, and lack of snow, happily behind us.
-                                Above all, I
-                                like to spend time outside. I ski in the winter, I bike and run in the summer, and
-                                almost always I am
-                                thinking about when I am going to do one of those activities next. This is what brought
-                                me to Colorado!
-                            </p>
-                            <p>I am a full stack web developer with experience building MERN stack web apps to solve
-                                real-world
-                                problems. Through the completion of the Denver University Coding Boot Camp, I am
-                                experienced
-                                developing full stack web apps, using JavaScript, HTML and CSS. I am also experienced
-                                developing
-                                within a group environment using agile methodology. </p>
-                            <p id="bottom">I am building upon 15 years experience in the sciences, as a chemist, where I
-                                thrived applying logic to
-                                solve problems on a daily basis. Through the years as a professional chemist, turned
-                                coder, I have refined my skills
-                                as a pragmatic, adaptable and flexible to change, clear and concise communicator. I am
-                                truly ecstatic about the
-                                possibility to leverage my problem solving, and communication skills toward success as a
-                                member of your team!</p>
-                        </div>
+
+                        <div class="about-me"></div>
+                        <p>My name is Andy Hardy. I am a full stack web developer with experience building MERN stack
+                            web apps to solve
+                            real-world
+                            problems. Through the completion of the Denver University Coding Boot Camp, I am
+                            experienced
+                            developing full stack web apps, using JavaScript, HTML and CSS. I am also experienced
+                            developing
+                            within a group environment using agile methodology. </p>
+                        <p id="bottom">I am building upon 15 years experience in the sciences, as a chemist, where I
+                            thrived applying logic to
+                            solve problems on a daily basis. Through the years as a professional chemist, turned
+                            coder, I have refined my skills
+                            as a pragmatic, adaptable and flexible to change, clear and concise communicator. I am
+                            truly ecstatic about the
+                            possibility to leverage my problem solving, and communication skills toward success as a
+                            member of your team!</p>
                     </div>
                 </div>
-                <div class="card-face card-face-back">
+                <div class="card-face card-face-back" id="back">
                     <div class="about">
-                        <h1>Portfolio</h1>
+                        <h2>Portfolio</h2>
                     </div>
-                    <div class="scene-2">
-                        <div class="carousel">
-                            <!-- This is the code for carousel contents -->
-                            <div class="carousel-cell" style="background-color: blue">
-
+                    <div class="main-carousel">
+                        <!-- This is the code for carousel contents -->
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image" src="assets/images/darth-vader-orig_orig.jpg">
+                            <div class="carousel-cell-div">
+                                <h3 class="carousel-cell-h3">Star Wars RPG game</h3>
+                                <p class="carousel-cell-p">
+                                    This game is a
+                                    single player role playing game where the objective is to destroy all your opponents
+                                    before
+                                    they destroy you! It was built using HTML, CSS, JavaScript and utilizes the jQuery
+                                    library.
+                                </p>
+                                <a href="#" class="carousel-cell-link"><img
+                                        src="assets/images/logos/github-logo.png"></img></a>
                             </div>
-                            <div class="carousel-cell" style="background-color: red">
-                               
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image" src="assets/images/TriviaGameCover.png">
+                            <div class="carousel-cell-div">
+                                <h3 class="carousel-cell-h3">Trivia Game</h3>
+                                <p class="carousel-cell-p">
+                                    A trivia game for Pearl Jam Fans... Or, people who enjoy trying to guess what
+                                    Eddie Vedder is saying! It was built using HTML, CSS and JavaScript.
+                                </p>
+                                <a href="#" class="carousel-cell-link"><img
+                                        src="assets/images/logos/github-logo.png"></img></a>
                             </div>
-                            <div class="carousel-cell" style="background-color: green">
-                               
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image" src="assets/images/Giftastic_cover.png">
+                            <div class="carousel-cell-div">
+                                <h3 class="carousel-cell-h3">GifTastic</h3>
+                                <p class="carousel-cell-p">
+                                    This web app accesses the Giphy API to display GIFs within a set of movie themes.
+                                    You may choose to search for other themes to display new GIFs. It was built using
+                                    HTML, CSS
+                                    and JavaScript.
+                                </p>
+                                <a href="#" class="carousel-cell-link"><img
+                                        src="assets/images/logos/github-logo.png"></img></a>
                             </div>
-                            <div class="carousel-cell" style="background-color: yellow">
-                                
+                        </div>
+                        <div class="carousel-cell">
+                            <img class="carousel-cell-image" src="#">
+                            <div class="carousel-cell-div">
+                                <h3 class="carousel-cell-h3">What's Hot?</h3>
+                                <p class="carousel-cell-p">
+                                    This web app is useful for finding hot-spots in cities you are unfamiliar with. 
+                                    The app takes a location, utilizes the Zomato API and MapQuest API to display a 
+                                    heatmap highlighting locations in a unique way.
+                                </p>
+                                <a href="#" class="carousel-cell-link"><img src="assets/images/logos/github-logo.png"></a>
                             </div>
-                            <div class="carousel-cell" style="background-color: orange">
-                               
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="arrow"><p class="arrow-p"><i class="arrow-down"></i></p></div>
 
         <script src="assets/javascript/javascript.js"></script>
     </div>

@@ -1,21 +1,29 @@
 $(document).ready(function () {
 
   // ======================= content flip on swipe / arrow click ===================
-  var turn = 0.5; // use this to flip the container
+  var turnFloat = 0.0;
 
-  $(".card").on("click", function () {
-    console.log("you clicked me");
-    // change the css to flip the card
-    var card = $(".card");
-    card.css("transform", "rotateX(" + turn + "turn)");
-    turn += 0.5;
+  $(".arrow-up").on("click", function () {
+    console.log("clicked it");
+    turnFloat += 0.5;
+    $(".card").css("transform", "rotateX(" + turnFloat + "turn)");
+  });
+
+  $(".arrow-down").on("click", function () {
+    console.log("clicked it");
+    turnFloat -= 0.5;
+    $(".card").css("transform", "rotateX(" + turnFloat + "turn)");
   });
   // ===============================================================================
 
   // ======================== carousel flippy code using flickity ==================
-
-  
-
+  $('.main-carousel').flickity({
+    // options
+    cellAlign: 'center',
+    wrapAround: true,
+    imagesLoaded: true,
+    // cellSelector: '.carousel-cell'
+  });
 
 
 
