@@ -105,10 +105,12 @@ header {
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .card-face-back {
     transform: rotateX(0.5turn);
+    -webkit-transform: rotateX(0.5turn);
 }
 
 .about {

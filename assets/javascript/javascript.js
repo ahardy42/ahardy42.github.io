@@ -7,12 +7,14 @@ $(document).ready(function () {
     console.log("clicked it");
     turnFloat += 0.5;
     $(".card").css("transform", "rotateX(" + turnFloat + "turn)");
+    $(".card").css("-webkit-transform", "rotateX(" + turnFloat + "turn)");
   });
 
   $(".arrow-down").on("click", function () {
     console.log("clicked it");
     turnFloat -= 0.5;
     $(".card").css("transform", "rotateX(" + turnFloat + "turn)");
+    $(".card").css("-webkit-transform", "rotateX(" + turnFloat + "turn)");
   });
   // ===============================================================================
 
