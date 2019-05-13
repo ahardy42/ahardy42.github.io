@@ -42,6 +42,11 @@ p {
     margin: 0 1em 1em 1em;
 }
 
+a {
+    text-decoration: none;
+    color: #302e2e;
+}
+
 header {
     display: flex;
     justify-content: space-around;
@@ -119,20 +124,33 @@ header {
     margin: 2em;
 }
 
+.about-me {
+    height: 100%;
+}
+
+.about-me > a > img {
+    margin: auto;
+}
+
 .profile {
     height: auto;
+    max-height: 400px;
     overflow: scroll;
 }
 
 .profile-image {
-    height: 250px;
-    float: left;
+    height: 300px;
     opacity: 1;
+    float: left;
 }
 
 .profile-image>img {
     height: 100%;
     margin: 0 2em;
+}
+
+a > .resume {
+    align-self: center;
 }
 
 .arrow {
@@ -180,7 +198,7 @@ i {
     opacity: 1;
 }
 
-.carousel-cell-image {
+.carousel-cell-image, .carousel-cell > a {
     height: 100%;
     max-width: 400px;
 }
@@ -245,14 +263,14 @@ i {
 /* Breakpoints */
 
 @media screen and (max-width: 830px) {
-    .carousel-cell-image {
+    .carousel-cell-image, .carousel-cell > a {
         align-self: center;
         height: 80%;
         max-width: 300px;
     }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 750px) {
     .header {
         flex-direction: column;
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(72, 88, 18, 0.4), rgba(255, 255, 255, 0.1));
@@ -277,6 +295,7 @@ i {
         align-content: space-around;
         flex-wrap: wrap;
         justify-content: space-around;
+        max-height: 250px;
     }
     .carousel-cell-div {
         margin: 0.4em 1em;
@@ -287,9 +306,9 @@ i {
     .carousel-cell-link>img {
         height: 50px;
     }
-    .carousel-cell-image {
+    .carousel-cell-image, .carousel-cell > a {
         align-self: center;
-        height: 50%;
+        height: 200px;
     }
     .about-me {
         height: 200px;
@@ -297,6 +316,9 @@ i {
     }
     .profile-image {
         height: 200px;
+    }
+    .about {
+        margin: 1em;
     }
 }
 
@@ -309,6 +331,10 @@ i {
     .profile-image {
         float: none;
         margin-bottom: 0.5em;
+    }
+    .carousel-cell-image, .carousel-cell > a {
+        align-self: center;
+        height: 125px;
     }
     .carousel-cell-link>img {
         height: 30px;
