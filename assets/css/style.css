@@ -17,10 +17,6 @@ body {
     background-size: cover;
 }
 
-.wrapper {
-    height: 100%;
-}
-
 h1 {
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 55px;
@@ -111,6 +107,7 @@ header { /* header for the main page */
 
 .card-face {
     display: flex; /* control the positioning of card elements with flexbox */
+    flex-direction: column;
     background-image: linear-gradient(200deg, rgba(255, 255, 255, 0.7), rgba(72, 88, 18, 0.7));
     position: absolute;
     height: 100%;
@@ -123,24 +120,15 @@ header { /* header for the main page */
 .card-face-back {
     transform: rotateX(0.5turn);
     -webkit-transform: rotateX(0.5turn);
+    -moz-transform: rotateX(0.5turn);
 }
 
-.about {
-    margin: 2em;
+.card-face-body {
+ 
 }
 
-.about-me {
-    height: 100%;
-}
+.card-face-header {
 
-.about-me > a > img {
-    margin: auto;
-}
-
-.profile {
-    height: auto;
-    max-height: 400px;
-    overflow: scroll;
 }
 
 .profile-image {
@@ -265,89 +253,5 @@ i {
     display: none;
 }
 
-/* Breakpoints */
+/* Breakpoints using min-width so that the breakpoints are for increasing screen sizes*/
 
-@media screen and (max-width: 830px) and (orientation: portrait) {
-    .carousel-cell-image, .carousel-cell > a {
-        align-self: center;
-        height: 80%;
-        max-width: 300px;
-    }
-}
-
-@media screen and (max-width: 750px) and (orientation: portrait) {
-    .header {
-        flex-direction: column;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(72, 88, 18, 0.4), rgba(255, 255, 255, 0.1));
-    }
-    .header-h1 {
-        background-image: none;
-    }
-    .navbar {
-        justify-content: center;
-    }
-    .nav {
-        margin: 0 1em;
-    }
-    .nav:nth-child(odd) {
-        margin-bottom: 0.5em;
-    }
-    
-    .nav:nth-child(even) {
-        margin-bottom: 0.5em;
-    }
-    .carousel-cell {
-        align-content: space-around;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        max-height: 250px;
-    }
-    .carousel-cell-div {
-        margin: 0.4em 1em;
-    }
-    .carousel-cell-p {
-        margin: 0 1em;
-    }
-    .carousel-cell-link>img {
-        height: 50px;
-    }
-    .carousel-cell-image, .carousel-cell > a {
-        align-self: center;
-        height: 200px;
-    }
-    .about-me {
-        height: 200px;
-        overflow: auto;
-    }
-    .profile-image {
-        height: 200px;
-    }
-    .about {
-        margin: 1em;
-    }
-}
-
-@media screen and (max-width: 555px) and (orientation: portrait) {
-    .profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .profile-image {
-        float: none;
-        margin-bottom: 0.5em;
-    }
-    .carousel-cell {
-        max-height: 400px;
-    }
-    .carousel-cell-image, .carousel-cell > a {
-        align-self: center;
-        height: 125px;
-    }
-    .carousel-cell-link>img {
-        height: 30px;
-    }
-    .scene {
-        width: 100%;
-    }
-}
