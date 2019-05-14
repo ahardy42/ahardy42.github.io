@@ -135,7 +135,7 @@ header {
 .profile {
     height: auto;
     max-height: 400px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .profile-image {
