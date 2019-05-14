@@ -47,11 +47,11 @@ a {
     color: #302e2e;
 }
 
-header {
+header { /* header for the main page */
     display: flex;
     justify-content: space-around;
     align-content: center;
-    height: 100px;
+    height: 10%; 
     background-color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5em;
 }
@@ -67,9 +67,7 @@ header {
 
 .navbar {
     display: flex;
-    min-width: 300px;
     justify-content: space-around;
-    /* align-items: center; */
 }
 
 .nav:nth-child(odd) {
@@ -86,14 +84,18 @@ header {
     height: 45px;
 }
 
+.button { /* style the button to switch card faces */
+    display: flex;
+    height: 5%;
+}
+
 /* main content style section */
 
-.scene {
+.scene { /* style this thing to a specific height */
     margin: 0.5em auto;
-    width: 85%;
-    z-index: 0;
-    height: 90%;
-    perspective: 500px;
+    width: 100%;
+    height: 85%;
+    perspective: 500px; /* gives you a certain perspective for card flip */
 }
 
 .card {
@@ -102,17 +104,20 @@ header {
     position: relative;
     transition: transform 1s;
     -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
 
 .card-face {
+    display: flex; /* control the positioning of card elements with flexbox */
     background-image: linear-gradient(200deg, rgba(255, 255, 255, 0.7), rgba(72, 88, 18, 0.7));
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
 .card-face-back {
@@ -262,7 +267,7 @@ i {
 
 /* Breakpoints */
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 830px) and (orientation: portrait) {
     .carousel-cell-image, .carousel-cell > a {
         align-self: center;
         height: 80%;
@@ -270,7 +275,7 @@ i {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) and (orientation: portrait) {
     .header {
         flex-direction: column;
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(72, 88, 18, 0.4), rgba(255, 255, 255, 0.1));
@@ -322,7 +327,7 @@ i {
     }
 }
 
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 555px) and (orientation: portrait) {
     .profile {
         display: flex;
         flex-direction: column;
@@ -331,6 +336,9 @@ i {
     .profile-image {
         float: none;
         margin-bottom: 0.5em;
+    }
+    .carousel-cell {
+        max-height: 400px;
     }
     .carousel-cell-image, .carousel-cell > a {
         align-self: center;
