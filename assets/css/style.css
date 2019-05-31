@@ -159,34 +159,6 @@ a > .resume {
     align-self: center;
 }
 
-.arrow {
-    margin: 0.5em 0 -0.5em 0;
-    display: flex;
-    justify-content: center;
-    opacity: 0.7;
-}
-
-i {
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 15px;
-}
-
-.arrow-p {
-    margin: 0;
-}
-
-.arrow-up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-
-.arrow-down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
 .carousel-cell {
     background-color: white;
     display: flex;
@@ -316,5 +288,13 @@ i {
 
     .carousel-cell-div {
         max-width: 35%;
+    }
+
+    .carousel-cell-div > h3 {
+        font-size: 25px;
+    }
+    
+    .carousel-cell-div > p {
+        font-size: 1em;
     }
 }
