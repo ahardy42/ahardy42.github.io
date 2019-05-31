@@ -4,11 +4,11 @@
 }
 
 html {
-    height: 100%;
+    height: 100vh;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     color: #302e2e;
     background: url(../images/beautiful-scenic-roadway-through-the-mountains-in-banff-national-park-alberta-canada.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -45,9 +45,8 @@ a {
 
 header { /* header for the main page */
     display: flex;
-    justify-content: space-around;
-    align-content: center;
-    height: 10%; 
+    flex-direction: column;
+    min-height: 15vh; 
     background-color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5em;
 }
@@ -82,15 +81,24 @@ header { /* header for the main page */
 
 .button { /* style the button to switch card faces */
     display: flex;
-    height: 5%;
+    justify-content: center;
+    min-height: 30px;
+    margin-bottom: 1.5em;
+}
+
+#switch {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid;
+    border-radius: 0.25em;
 }
 
 /* main content style section */
 
 .scene { /* style this thing to a specific height */
     margin: 0.5em auto;
-    width: 100%;
-    height: 85%;
+    width: 95vw;
+    height: 60vh;
+    min-height: 600px;
     perspective: 500px; /* gives you a certain perspective for card flip */
 }
 
@@ -110,6 +118,7 @@ header { /* header for the main page */
     flex-direction: column;
     background-image: linear-gradient(200deg, rgba(255, 255, 255, 0.7), rgba(72, 88, 18, 0.7));
     position: absolute;
+    overflow-y: auto;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
@@ -124,11 +133,15 @@ header { /* header for the main page */
 }
 
 .card-face-body {
- 
+    margin-bottom: 1em;
+    height: 80%;
 }
 
 .card-face-header {
-
+    margin: 1em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    border-bottom: 2px solid #302e2e;
 }
 
 .profile-image {
@@ -139,7 +152,7 @@ header { /* header for the main page */
 
 .profile-image>img {
     height: 100%;
-    margin: 0 2em;
+    margin: 0 1em;
 }
 
 a > .resume {
@@ -177,6 +190,8 @@ i {
 .carousel-cell {
     background-color: white;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 400px;
     width: 100%;
     margin-right: 10px;
@@ -191,9 +206,14 @@ i {
     opacity: 1;
 }
 
-.carousel-cell-image, .carousel-cell > a {
-    height: 100%;
+.carousel-cell > a {
+    height: 40%;
     max-width: 400px;
+    margin-bottom: 0.5em;
+}
+
+.carousel-cell-image {
+    height: 100%;
 }
 
 .carousel-cell-div {
@@ -206,6 +226,18 @@ i {
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.5em;
+}
+
+.carousel-cell-div > h3 {
+    font-size: 25px;
+}
+
+.carousel-cell-div > p {
+    font-size: 0.8em;
+}
+
+.carousel-cell-div > a > img {
+    width: 50px;
 }
 
 .flickity-viewport {
@@ -255,3 +287,34 @@ i {
 
 /* Breakpoints using min-width so that the breakpoints are for increasing screen sizes*/
 
+@media only screen and (min-width: 750px) { /* bigger than iPhone sideways */
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        min-height: 10vh;
+    }
+
+    .navbar {
+        min-width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .carousel-cell {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .carousel-cell > a {
+        height: 75%;
+        display: flex;
+    }
+
+    .carousel-cell-image {
+        width: 100%;
+    }
+
+    .carousel-cell-div {
+        max-width: 35%;
+    }
+}

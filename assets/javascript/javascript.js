@@ -3,9 +3,14 @@ $(document).ready(function () {
   // ======================= content flip on arrow click ===================
   var turnFloat = 0.0;
 
-  $(".arrow-up").on("click", function () { 
+  $("#switch").on("click", function () { 
     console.log("clicked it");
     turnFloat += 0.5;
+    if (turnFloat - parseInt(turnFloat) === 0) {
+      $(this).text("Portfolio");
+    } else {
+      $(this).text("About Me");
+    }
     $(".card").css("transform", "rotateX(" + turnFloat + "turn)");
     $(".card").css("-webkit-transform", "rotateX(" + turnFloat + "turn)");
   });
