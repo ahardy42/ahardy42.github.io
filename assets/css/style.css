@@ -288,6 +288,7 @@ a > .resume {
 
     .carousel-cell-div {
         max-width: 35%;
+        height: 90%;
     }
 
     .carousel-cell-div > h3 {
