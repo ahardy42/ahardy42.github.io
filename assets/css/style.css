@@ -4,21 +4,17 @@
 }
 
 html {
-    height: 100%;
+    height: 100vh;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     color: #302e2e;
     background: url(../images/beautiful-scenic-roadway-through-the-mountains-in-banff-national-park-alberta-canada.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-.wrapper {
-    height: 100%;
 }
 
 h1 {
@@ -47,11 +43,10 @@ a {
     color: #302e2e;
 }
 
-header {
+header { /* header for the main page */
     display: flex;
-    justify-content: space-around;
-    align-content: center;
-    height: 100px;
+    flex-direction: column;
+    min-height: 15vh; 
     background-color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1.5em;
 }
@@ -67,9 +62,7 @@ header {
 
 .navbar {
     display: flex;
-    min-width: 300px;
     justify-content: space-around;
-    /* align-items: center; */
 }
 
 .nav:nth-child(odd) {
@@ -86,14 +79,27 @@ header {
     height: 45px;
 }
 
+.button { /* style the button to switch card faces */
+    display: flex;
+    justify-content: center;
+    min-height: 30px;
+    margin-bottom: 1.5em;
+}
+
+#switch {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid;
+    border-radius: 0.25em;
+}
+
 /* main content style section */
 
-.scene {
+.scene { /* style this thing to a specific height */
     margin: 0.5em auto;
-    width: 85%;
-    z-index: 0;
-    height: 90%;
-    perspective: 500px;
+    width: 95vw;
+    height: 60vh;
+    min-height: 600px;
+    perspective: 500px; /* gives you a certain perspective for card flip */
 }
 
 .card {
@@ -102,40 +108,40 @@ header {
     position: relative;
     transition: transform 1s;
     -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
 
 .card-face {
+    display: flex; /* control the positioning of card elements with flexbox */
+    flex-direction: column;
     background-image: linear-gradient(200deg, rgba(255, 255, 255, 0.7), rgba(72, 88, 18, 0.7));
     position: absolute;
+    overflow-y: auto;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
 .card-face-back {
     transform: rotateX(0.5turn);
     -webkit-transform: rotateX(0.5turn);
+    -moz-transform: rotateX(0.5turn);
 }
 
-.about {
-    margin: 2em;
+.card-face-body {
+    margin-bottom: 1em;
+    height: 80%;
 }
 
-.about-me {
-    height: 100%;
-}
-
-.about-me > a > img {
-    margin: auto;
-}
-
-.profile {
-    height: auto;
-    max-height: 400px;
-    overflow: auto;
+.card-face-header {
+    margin: 1em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    border-bottom: 2px solid #302e2e;
 }
 
 .profile-image {
@@ -146,44 +152,18 @@ header {
 
 .profile-image>img {
     height: 100%;
-    margin: 0 2em;
+    margin: 0 1em;
 }
 
 a > .resume {
     align-self: center;
 }
 
-.arrow {
-    margin: 0.5em 0 -0.5em 0;
-    display: flex;
-    justify-content: center;
-    opacity: 0.7;
-}
-
-i {
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 15px;
-}
-
-.arrow-p {
-    margin: 0;
-}
-
-.arrow-up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-
-.arrow-down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
 .carousel-cell {
     background-color: white;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 400px;
     width: 100%;
     margin-right: 10px;
@@ -198,9 +178,14 @@ i {
     opacity: 1;
 }
 
-.carousel-cell-image, .carousel-cell > a {
-    height: 100%;
+.carousel-cell > a {
+    height: 40%;
     max-width: 400px;
+    margin-bottom: 0.5em;
+}
+
+.carousel-cell-image {
+    height: 100%;
 }
 
 .carousel-cell-div {
@@ -213,6 +198,18 @@ i {
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.5em;
+}
+
+.carousel-cell-div > h3 {
+    font-size: 25px;
+}
+
+.carousel-cell-div > p {
+    font-size: 0.8em;
+}
+
+.carousel-cell-div > a > img {
+    width: 50px;
 }
 
 .flickity-viewport {
@@ -260,86 +257,45 @@ i {
     display: none;
 }
 
-/* Breakpoints */
+/* Breakpoints using min-width so that the breakpoints are for increasing screen sizes*/
 
-@media screen and (max-width: 830px) {
-    .carousel-cell-image, .carousel-cell > a {
-        align-self: center;
-        height: 80%;
-        max-width: 300px;
+@media only screen and (min-width: 750px) { /* bigger than iPhone sideways */
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        min-height: 10vh;
+    }
+
+    .navbar {
+        min-width: 30%;
     }
 }
 
-@media screen and (max-width: 750px) {
-    .header {
-        flex-direction: column;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(72, 88, 18, 0.4), rgba(255, 255, 255, 0.1));
+@media only screen and (min-width: 1000px) {
+    .carousel-cell {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-    .header-h1 {
-        background-image: none;
+
+    .carousel-cell > a {
+        height: 75%;
+        display: flex;
     }
-    .navbar {
-        justify-content: center;
+
+    .carousel-cell-image {
+        width: 100%;
     }
-    .nav {
-        margin: 0 1em;
+
+    .carousel-cell-div {
+        max-width: 35%;
+        height: 90%;
     }
-    .nav:nth-child(odd) {
-        margin-bottom: 0.5em;
+
+    .carousel-cell-div > h3 {
+        font-size: 25px;
     }
     
-    .nav:nth-child(even) {
-        margin-bottom: 0.5em;
-    }
-    .carousel-cell {
-        align-content: space-around;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        max-height: 250px;
-    }
-    .carousel-cell-div {
-        margin: 0.4em 1em;
-    }
-    .carousel-cell-p {
-        margin: 0 1em;
-    }
-    .carousel-cell-link>img {
-        height: 50px;
-    }
-    .carousel-cell-image, .carousel-cell > a {
-        align-self: center;
-        height: 200px;
-    }
-    .about-me {
-        height: 200px;
-        overflow: auto;
-    }
-    .profile-image {
-        height: 200px;
-    }
-    .about {
-        margin: 1em;
-    }
-}
-
-@media screen and (max-width: 555px) {
-    .profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .profile-image {
-        float: none;
-        margin-bottom: 0.5em;
-    }
-    .carousel-cell-image, .carousel-cell > a {
-        align-self: center;
-        height: 125px;
-    }
-    .carousel-cell-link>img {
-        height: 30px;
-    }
-    .scene {
-        width: 100%;
+    .carousel-cell-div > p {
+        font-size: 1em;
     }
 }
